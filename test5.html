@@ -1,0 +1,78 @@
+<html>
+
+<head>
+	<title> Registration </title>
+</head>
+
+<body>
+	<form class="pure-form">
+		<fieldset>
+		<legend> Private ID </legend>
+		Name:
+		<input type="text" name="Name" autocomplete autofocus required/> </br>
+		Surname:
+		<input type="text" name="Surname" autocomplete required/> </br>
+		Age:
+		<input type="number" min="1" max="90"/> </br>
+		Gender:
+		<input type="radio" name="gender"/> Male
+		<input type="radio" name="gender"/> Female </br>
+		City:
+		<select>
+			<option> Select </option>
+			<option> Varna </option>
+			<option> Sofia </option>
+			<option> Plovdiv </option>
+			<option> Burgas </option>
+		</select> </br>
+		Email:
+		<input type="email" /> </br>
+		Password:
+		<input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+		title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required> </br>
+		Confirm Password:
+		<!-- <input type="password" name="pass"required/> </br> -->
+		<input type="password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+		title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required oninput="check(this)"> </br>
+		<!-- <input type="checkbox" onclick="password()">Show Password   не бачка --> 
+		
+		<script language='javascript' type='text/javascript'>
+		function check(input) {
+			if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');} 
+			else {
+            input.setCustomValidity('');
+			}
+		}
+		</script>
+<br /><br />
+		</fieldset>
+		
+		
+		<fieldset>
+		<legend> Others </legend>
+		Comments:
+		<textarea name="Content" placeholder="Enter commets" rows="2" cols="20"> 
+		</textarea></br>
+		Confirm: 
+		<input type="checkbox" required/> </br>
+		Reset:
+		<input type="reset" />
+		Submit:
+		<input type="submit" />
+		</fieldset>
+		
+		<fieldset>
+		<legend> Rate </legend>
+		<input type="range" min="0" max="6" /> </br>
+		<input type="number" min="0" max="6" />
+		</fieldset>
+	
+	</form>
+
+	<iframe name="Terelic Academy" width="600" height="400"
+	src="https://www.telerikacademy.com" border> </iframe>
+	
+</body> 
+
+</html>
